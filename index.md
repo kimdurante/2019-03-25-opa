@@ -1,20 +1,19 @@
 ---
 layout: workshop      # DON'T CHANGE THIS.
-carpentry: "FIXME"    # what kind of Carpentry (must be either "lc" or "dc" or "swc").  
-                      # Be sure to update the Carpentry type in _config.yml as well.  
-venue: "Li Ka Shing Center for Learning and Knowledge (LKSC)" # brief name of host site without address (e.g., "Euphoric State University")
-address: "291 Campus Drive, 1st Floor, Stanford, California"      # full street address of workshop (e.g., "Room A, 123 Forth Street, Blimingen, Euphoria")
+carpentry: "swc"    # what kind of Carpentry (must be either "lc" or "dc" or "swc")
+venue: "Stanford University"        # brief name of host site without address (e.g., "Euphoric State University")
+address: "Sapp Center (Old Chem) Room 115, 376 Lomita Dr, Stanford, CA 94305"      # full street address of workshop (e.g., "Room A, 123 Forth Street, Blimingen, Euphoria")
 country: "us"      # lowercase two-letter ISO country code such as "fr" (see https://en.wikipedia.org/wiki/ISO_3166-1)
 language: "en"     # lowercase two-letter ISO language code such as "fr" (see https://en.wikipedia.org/wiki/ISO_639-1)
-latlng: "FIXME"       # decimal latitude and longitude of workshop venue (e.g., "41.7901128,-87.6007318" - use https://www.latlong.net/)
-humandate: "March 25-26, 2019"    # human-readable dates for the workshop (e.g., "Feb 17-18, 2020")
-humantime: "8:30 am - 4:30 pm"    # human-readable times for the workshop (e.g., "9:00 am - 4:30 pm")
-startdate: 2019-03-25      # machine-readable start date for the workshop in YYYY-MM-DD format like 2015-01-01
-enddate: 2019-03-26        # machine-readable end date for the workshop in YYYY-MM-DD format like 2015-01-02
-instructor: ["Frances Davenport","Kim Durante","Darach Miller"] # boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
-helper: ["TBA"]     # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
-email: ["rmoran@stanford.edu"]    # boxed, comma-separated list of contact email addresses for the host, lead instructor, or whoever else is handling questions, like ["marlyn.wescoff@example.org", "fran.bilas@example.org", "ruth.lichterman@example.org"]
-collaborative_notes:             # optional: URL for the workshop collaborative notes, e.g. an Etherpad or Google Docs document
+latlng: "37.433075, -122.175049"       # decimal latitude and longitude of workshop venue (e.g., "41.7901128,-87.6007318" - use https://www.latlong.net/)
+humandate: "September 06-07, 2018"    # human-readable dates for the workshop (e.g., "Feb 17-18, 2020")
+humantime: "08:30 - 16:30"    # human-readable times for the workshop (e.g., "9:00 am - 4:30 pm")
+startdate: 2018-09-06      # machine-readable start date for the workshop in YYYY-MM-DD format like 2015-01-01
+enddate: 2018-09-07        # machine-readable end date for the workshop in YYYY-MM-DD format like 2015-01-02
+instructor: ["Zac Painter", "Šimon Podhajský"] # boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
+helper: ["Javier de la Rosa", "Kim Durante", "Bruno Barros Queliconi"]     # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
+email: ["roula@stanford.edu"]    # boxed, comma-separated list of contact email addresses for the host, lead instructor, or whoever else is handling questions, like ["marlyn.wescoff@example.org", "fran.bilas@example.org", "ruth.lichterman@example.org"]
+collaborative_notes:   http://pad.software-carpentry.org/2018-09-06-stanford          # optional: URL for the workshop collaborative notes, e.g. an Etherpad or Google Docs document
 eventbrite:           # optional: alphanumeric key for Eventbrite registration, e.g., "1234567890AB" (if Eventbrite is being used)
 ---
 
@@ -46,6 +45,7 @@ eventbrite:           # optional: alphanumeric key for Eventbrite registration, 
   scrolling="auto">
 </iframe>
 {% endif %}
+
 
 <h2 id="general">General Information</h2>
 
@@ -145,12 +145,11 @@ eventbrite:           # optional: alphanumeric key for Eventbrite registration, 
   <li>Accessible restrooms are available.</li>
 </ul>
 <p>
-  Materials will be provided in advance of the workshop and
-  large-print handouts are available if needed by notifying the
-  organizers in advance.  If we can help making learning easier for
-  you (e.g. sign-language interpreters, lactation facilities) please
-  get in touch (using contact details below) and we will
-  attempt to provide them.
+Materials will be provided in advance of the workshop and we will do our
+best to accommodate special need requests in order to facilitate 
+learning. Please notifying the organizers (contact details below) in 
+advance, so they can discuss with you what can be provided.
+
 </p>
 
 {% comment %}
@@ -310,22 +309,18 @@ eventbrite:           # optional: alphanumeric key for Eventbrite registration, 
       <a href="https://www.youtube.com/watch?v=339AEqk9c-8">Video Tutorial</a>
       <ol>
         <li>Download the Git for Windows <a href="https://git-for-windows.github.io/">installer</a>.</li>
-        <li>Run the installer and follow the steps below:
+        <li>Run the installer and follow the steps bellow:
           <ol>
-            {% comment %} Git 2.18.0 Setup {% endcomment %}
-            <li>
-                Click on "Next" four times (two times if you've previously
-                installed Git).  You don't need to change anything
-                in the Information, location, components, and start menu screens.
-            </li>
-            <li>
-                <strong>
-                Select “Use the nano editor by default” and click on “Next”.
-                </strong>
-            </li>
+            {% comment %} Git 2.8.2 Setup {% endcomment %}
+            {% comment %} Information {% endcomment %}
+            <li>Click on "Next".</li>
+            {% comment %} Select Components {% endcomment %}
+            <li>Click on "Next".</li>
             {% comment %} Adjusting your PATH environment {% endcomment %}
             <li>
+              <strong>
                 Keep "Use Git from the Windows Command Prompt" selected and click on "Next".
+              </strong>
                 If you forgot to do this programs that you need for the workshop will not work properly.
                 If this happens rerun the installer and select the appropriate option.
             </li>
@@ -333,12 +328,14 @@ eventbrite:           # optional: alphanumeric key for Eventbrite registration, 
             <li>Click on "Next".</li>
             {% comment %} Configuring the line ending conversions {% endcomment %}
             <li>
+              <strong>
                 Keep "Checkout Windows-style, commit Unix-style line endings" selected and click on "Next".
+              </strong>
             </li>
             {% comment %} Configuring the terminal emulator to use with Git Bash {% endcomment %}
             <li>
               <strong>
-                Select "Use Windows' default console window" and click on "Next".
+                Keep "Use Windows' default console window" selected and click on "Next".
               </strong>
             </li>
             {% comment %} Configuring experimental performance tweaks {% endcomment %}
@@ -425,9 +422,6 @@ eventbrite:           # optional: alphanumeric key for Eventbrite registration, 
         <strong>For OS X 10.9 and higher</strong>, install Git for Mac
         by downloading and running the most recent "mavericks" installer from
         <a href="http://sourceforge.net/projects/git-osx-installer/files/">this list</a>.
-        Because this installer is not signed by the developer, you may have to
-        right click (control click) on the .pkg file, click Open, and click
-        Open on the pop up window. 
         After installing Git, there will not be anything in your <code>/Applications</code> folder,
         as Git is a command line program.
         <strong>For older versions of OS X (10.5-10.8)</strong> use the
@@ -453,20 +447,32 @@ eventbrite:           # optional: alphanumeric key for Eventbrite registration, 
   <p>
     When you're writing code, it's nice to have a text editor that is
     optimized for writing code, with features like automatic
-    color-coding of key words. The default text editor on macOS and
+    color-coding of key words.  The default text editor on macOS and
     Linux is usually set to Vim, which is not famous for being
-    intuitive. If you accidentally find yourself stuck in it, hit
-    the <kbd>Esc</kbd> key, followed by <kbd>:</kbd>+<kbd>Q</kbd>+<kbd>!</kbd> 
-    (colon, lower-case 'q', exclamation mark), then hitting <kbd>Return</kbd> to 
-    return to the shell.
+    intuitive.  If you accidentally find yourself stuck in it, try
+    typing the escape key, followed by <code>:q!</code> (colon, lower-case 'q',
+    exclamation mark), then hitting Return to return to the shell.
   </p>
 
   <div class="row">
     <div class="col-md-4">
       <h4 id="editor-windows">Windows</h4>
+      <a href="https://www.youtube.com/watch?v=339AEqk9c-8">Video Tutorial</a>
       <p>
         nano is a basic editor and the default that instructors use in the workshop.
-        It is installed along with Git.
+        To install it,
+        download the <a href="{{site.swc_installer}}">
+          {% if page.carpentry == "swc" %}
+          Software Carpentry
+          {% elsif page.carpentry == "dc" %}
+          Data Carpentry
+          {% elsif page.carpentry == "lc" %}
+          Library Carpentry
+          {% endif %}
+          Windows installer
+	</a>
+        and double click on the file to run it.
+        <strong>This installer requires an active internet connection.</strong>
       </p>
       <p>
         Others editors that you can use are
@@ -545,7 +551,7 @@ eventbrite:           # optional: alphanumeric key for Eventbrite registration, 
       <ol>
         <li>Open <a href="https://www.anaconda.com/download/#windows">https://www.anaconda.com/download/#windows</a> with your web browser.</li>
         <li>Download the Python 3 installer for Windows.</li>
-        <li>Install Python 3 using all of the defaults for installation <em>except</em> make sure to check <strong>Add Anaconda to my PATH environment variable</strong>.</li>
+        <li>Install Python 3 using all of the defaults for installation <em>except</em> make sure to check <strong>Make Anaconda the default Python</strong>.</li>
       </ol>
     </div>
     <div class="col-md-4">
@@ -571,15 +577,15 @@ eventbrite:           # optional: alphanumeric key for Eventbrite registration, 
         </li>
         <li>
           Type <pre>bash Anaconda3-</pre> and then press
-          <kbd>Tab</kbd>. The name of the file you just downloaded should
+          tab. The name of the file you just downloaded should
           appear. If it does not, navigate to the folder where you
           downloaded the file, for example with:
           <pre>cd Downloads</pre>
           Then, try again.
         </li>
         <li>
-          Press <kbd>Return</kbd>. You will follow the text-only prompts. To move through
-          the text, press <kbd>Spacebar</kbd>. Type <code>yes</code> and
+          Press enter. You will follow the text-only prompts. To move through
+          the text, press the space key. Type <code>yes</code> and
           press enter to approve the license. Press enter to approve the
           default location for the files. Type <code>yes</code> and
           press enter to prepend Anaconda to your <code>PATH</code>
@@ -600,80 +606,3 @@ eventbrite:           # optional: alphanumeric key for Eventbrite registration, 
 {% endcomment %}
 </div> {% comment %} End of 'Python' section. {% endcomment %}
 
-<div id="r"> {% comment %} Start of 'R' section.
-  <h3>R</h3>
-
-  <p>
-    <a href="https://www.r-project.org">R</a> is a programming language
-    that is especially powerful for data exploration, visualization, and
-    statistical analysis. To interact with R, we use
-    <a href="https://www.rstudio.com/">RStudio</a>.
-  </p>
-
-  <div class="row">
-    <div class="col-md-4">
-      <h4 id="r-windows">Windows</h4>
-      <a href="https://www.youtube.com/watch?v=q0PjTAylwoU">Video Tutorial</a>
-      <p>
-        Install R by downloading and running
-        <a href="https://cran.r-project.org/bin/windows/base/release.htm">this .exe file</a>
-        from <a href="https://cran.r-project.org/index.html">CRAN</a>.
-        Also, please install the
-        <a href="https://www.rstudio.com/products/rstudio/download/#download">RStudio IDE</a>.
-        Note that if you have separate user and admin accounts, you should run the 
-        installers as administrator (right-click on .exe file and select "Run as 
-        administrator" instead of double-clicking). Otherwise problems may occur later, 
-        for example when installing R packages.
-      </p>
-    </div>
-    <div class="col-md-4">
-      <h4 id="r-macosx">macOS</h4>
-      <a href="https://www.youtube.com/watch?v=5-ly3kyxwEg">Video Tutorial</a>
-      <p>
-        Install R by downloading and running
-        <a href="https://cran.r-project.org/bin/macosx/R-latest.pkg">this .pkg file</a>
-        from <a href="https://cran.r-project.org/index.html">CRAN</a>.
-        Also, please install the
-        <a href="https://www.rstudio.com/products/rstudio/download/#download">RStudio IDE</a>.
-      </p>
-    </div>
-    <div class="col-md-4">
-      <h4 id="r-linux">Linux</h4>
-      <p>
-        You can download the binary files for your distribution
-        from <a href="https://cran.r-project.org/index.html">CRAN</a>. Or
-        you can use your package manager (e.g. for Debian/Ubuntu
-        run <code>sudo apt-get install r-base</code> and for Fedora run
-        <code>sudo dnf install R</code>).  Also, please install the
-        <a href="https://www.rstudio.com/products/rstudio/download/#download">RStudio IDE</a>.
-      </p>
-    </div>
-  </div>{% endcomment %}
-</div> {% comment %} End of 'R' section. {% endcomment %}
-
-
-{% comment %}
-<div id="vm">
-  <h3>Virtual Machine</h3>
-
-  <p>
-    Some instructors prefer to have learners use a virtual machine (VM)
-    rather than install software on their own computers.  If your
-    instructors have chosen to do this, please:
-  </p>
-  <ol>
-    <li>
-      Install <a href="https://www.virtualbox.org/">VirtualBox</a>.
-    </li>
-    <li>
-      Download our <a href="{{site.swc_vm}}">VM image</a>.
-      <strong>Warning:</strong> this file is 1.7 GByte, so please
-      download it <em>before</em> coming to your workshop.
-    </li>
-    <li>
-      Load the VM into VirtualBox by selecting "Import Appliance" and
-      loading the <code>.ova</code> file.
-    </li>
-  </ol>
-</div>
-{% endcomment %}
